@@ -3423,7 +3423,7 @@ babel-preset-react-app@^10.0.0:
     babel-plugin-macros "^3.1.0"
     babel-plugin-transform-react-remove-prop-types "^0.4.24"
 
-babel-runtime@^6.11.6, babel-runtime@^6.26.0:
+babel-runtime@^6.26.0:
   version "6.26.0"
   resolved "https://martifactory.io/api/npm/virtual-npm/babel-runtime/-/babel-runtime-6.26.0.tgz#965c7058668e82b55d7bfe04ff2337bc8b5647fe"
   integrity sha1-llxwWGaOgrVde/4E/yM3vItWR/4=
@@ -3875,11 +3875,6 @@ camelize@^1.0.0:
   resolved "https://martifactory.io/api/npm/virtual-npm/camelize/-/camelize-1.0.0.tgz"
   integrity sha1-FkpUg+Yw+kMh5a8HAg5TGDGyYJs=
 
-can-use-dom@^0.1.0:
-  version "0.1.0"
-  resolved "https://martifactory.io/api/npm/virtual-npm/can-use-dom/-/can-use-dom-0.1.0.tgz#22cc4a34a0abc43950f42c6411024a3f6366b45a"
-  integrity sha1-IsxKNKCrxDlQ9CxkEQJKP2NmtFo=
-
 caniuse-api@^3.0.0:
   version "3.0.0"
   resolved "https://martifactory.io/api/npm/virtual-npm/caniuse-api/-/caniuse-api-3.0.0.tgz#5e4d90e2274961d46291997df599e3ed008ee4c0"
@@ -3931,11 +3926,6 @@ chalk@^4.0.0, chalk@^4.1.0, chalk@^4.1.2:
   dependencies:
     ansi-styles "^4.1.0"
     supports-color "^7.1.0"
-
-change-emitter@^0.1.2:
-  version "0.1.6"
-  resolved "https://martifactory.io/api/npm/virtual-npm/change-emitter/-/change-emitter-0.1.6.tgz#e8b2fe3d7f1ab7d69a32199aff91ea6931409515"
-  integrity sha1-6LL+PX8at9aaMhma/5HqaTFAlRU=
 
 char-regex@^1.0.2:
   version "1.0.2"
@@ -5765,6 +5755,14 @@ expo-keep-awake@~10.0.1:
   resolved "https://martifactory.io/api/npm/virtual-npm/expo-keep-awake/-/expo-keep-awake-10.0.1.tgz"
   integrity sha1-nxF2IWxB7uIIQ8gjKs/corwy0zQ=
 
+expo-location@~14.0.1:
+  version "14.0.1"
+  resolved "https://martifactory.io/api/npm/virtual-npm/expo-location/-/expo-location-14.0.1.tgz#28a5ab1296a103202bb7598539cf78e2f0be5991"
+  integrity sha1-KKWrEpahAyArt1mFOc944vC+WZE=
+  dependencies:
+    "@expo/config-plugins" "^4.0.2"
+    unimodules-task-manager-interface "~7.1.0"
+
 expo-modules-autolinking@0.5.5:
   version "0.5.5"
   resolved "https://martifactory.io/api/npm/virtual-npm/expo-modules-autolinking/-/expo-modules-autolinking-0.5.5.tgz"
@@ -5953,7 +5951,7 @@ fbjs-css-vars@^1.0.0:
   resolved "https://martifactory.io/api/npm/virtual-npm/fbjs-css-vars/-/fbjs-css-vars-1.0.2.tgz"
   integrity sha1-IWVRE2rgL+JVkyw+yHdfGOLAeLg=
 
-fbjs@^0.8.1, fbjs@^0.8.4:
+fbjs@^0.8.4:
   version "0.8.18"
   resolved "https://martifactory.io/api/npm/virtual-npm/fbjs/-/fbjs-0.8.18.tgz"
   integrity sha1-mDXgrduayi7/Uylc15yhz8fJZio=
@@ -6463,11 +6461,6 @@ google-libphonenumber@^3.2.2:
   resolved "https://martifactory.io/api/npm/virtual-npm/google-libphonenumber/-/google-libphonenumber-3.2.26.tgz"
   integrity sha1-xfyveTiSzQee21o98ZH9yVX7lYc=
 
-google-maps-infobox@^2.0.0:
-  version "2.0.0"
-  resolved "https://martifactory.io/api/npm/virtual-npm/google-maps-infobox/-/google-maps-infobox-2.0.0.tgz#1ea6de93c0cdf4138c2d586331835c83dcc59dc2"
-  integrity sha1-Hqbek8DN9BOMLVhjMYNcg9zFncI=
-
 graceful-fs@^4.1.11, graceful-fs@^4.1.15, graceful-fs@^4.1.2, graceful-fs@^4.1.3, graceful-fs@^4.1.6, graceful-fs@^4.1.9, graceful-fs@^4.2.0, graceful-fs@^4.2.4:
   version "4.2.9"
   resolved "https://martifactory.io/api/npm/virtual-npm/graceful-fs/-/graceful-fs-4.2.9.tgz#041b05df45755e587a24942279b9d113146e1c96"
@@ -6609,7 +6602,7 @@ hmac-drbg@^1.0.1:
     minimalistic-assert "^1.0.0"
     minimalistic-crypto-utils "^1.0.1"
 
-hoist-non-react-statics@^2.3.1, hoist-non-react-statics@^2.5.5:
+hoist-non-react-statics@^2.5.5:
   version "2.5.5"
   resolved "https://martifactory.io/api/npm/virtual-npm/hoist-non-react-statics/-/hoist-non-react-statics-2.5.5.tgz"
   integrity sha1-xZA89AnA39kI84jmGdhrnBF0y0c=
@@ -6981,7 +6974,7 @@ interpret@^1.0.0:
   resolved "https://martifactory.io/api/npm/virtual-npm/interpret/-/interpret-1.4.0.tgz"
   integrity sha1-Zlq4vE2iendKQFhOgS4+D6RbGh4=
 
-invariant@^2.2.1, invariant@^2.2.4:
+invariant@^2.2.4:
   version "2.2.4"
   resolved "https://martifactory.io/api/npm/virtual-npm/invariant/-/invariant-2.2.4.tgz"
   integrity sha1-YQ88ksk1nOHbYW5TgAjSP/NRWOY=
@@ -8322,7 +8315,7 @@ lodash.uniq@^4.5.0:
   resolved "https://martifactory.io/api/npm/virtual-npm/lodash.uniq/-/lodash.uniq-4.5.0.tgz#d0225373aeb652adc1bc82e4945339a842754773"
   integrity sha1-0CJTc662Uq3BvILklFM5qEJ1R3M=
 
-"lodash@>=3.5 <5", lodash@^4.16.2, lodash@^4.17.11, lodash@^4.17.14, lodash@^4.17.15, lodash@^4.17.19, lodash@^4.17.20, lodash@^4.17.21, lodash@^4.17.5, lodash@^4.7.0:
+"lodash@>=3.5 <5", lodash@^4.17.11, lodash@^4.17.14, lodash@^4.17.15, lodash@^4.17.19, lodash@^4.17.20, lodash@^4.17.21, lodash@^4.17.5, lodash@^4.7.0:
   version "4.17.21"
   resolved "https://martifactory.io/api/npm/virtual-npm/lodash/-/lodash-4.17.21.tgz"
   integrity sha1-Z5WRxWTDv/quhFTPCz3zcMPWkRw=
@@ -8416,16 +8409,6 @@ map-visit@^1.0.0:
   integrity sha1-7Nyo8TFE5mDxtb1B8S80edmN+48=
   dependencies:
     object-visit "^1.0.0"
-
-marker-clusterer-plus@^2.1.4:
-  version "2.1.4"
-  resolved "https://martifactory.io/api/npm/virtual-npm/marker-clusterer-plus/-/marker-clusterer-plus-2.1.4.tgz#f8eff74d599dab3b7d0e3fed5264ea0e704f5d67"
-  integrity sha1-+O/3TVmdqzt9Dj/tUmTqDnBPXWc=
-
-markerwithlabel@^2.0.1:
-  version "2.0.2"
-  resolved "https://martifactory.io/api/npm/virtual-npm/markerwithlabel/-/markerwithlabel-2.0.2.tgz#fa6aee4abb0ee553e24e2b708226858f58b8729e"
-  integrity sha1-+mruSrsO5VPiTitwgiaFj1i4cp4=
 
 md5-file@^3.2.3:
   version "3.2.3"
@@ -10596,7 +10579,7 @@ prompts@^2.0.1, prompts@^2.4.0:
     kleur "^3.0.3"
     sisteransi "^1.0.5"
 
-prop-types@^15.5.0, prop-types@^15.5.10, prop-types@^15.5.8, prop-types@^15.6.0, prop-types@^15.7.2:
+prop-types@^15.5.0, prop-types@^15.5.10, prop-types@^15.6.0, prop-types@^15.7.2:
   version "15.8.1"
   resolved "https://martifactory.io/api/npm/virtual-npm/prop-types/-/prop-types-15.8.1.tgz"
   integrity sha1-Z9h78aaU9IQ1zzMsJK8QIUoxQLU=
@@ -10847,23 +10830,6 @@ react-google-autocomplete@^2.6.1:
     lodash.debounce "^4.0.8"
     prop-types "^15.5.0"
 
-react-google-maps@^9.4.5:
-  version "9.4.5"
-  resolved "https://martifactory.io/api/npm/virtual-npm/react-google-maps/-/react-google-maps-9.4.5.tgz#920c199bdc925e0ce93880edffb09428d263aafa"
-  integrity sha1-kgwZm9ySXgzpOIDt/7CUKNJjqvo=
-  dependencies:
-    babel-runtime "^6.11.6"
-    can-use-dom "^0.1.0"
-    google-maps-infobox "^2.0.0"
-    invariant "^2.2.1"
-    lodash "^4.16.2"
-    marker-clusterer-plus "^2.1.4"
-    markerwithlabel "^2.0.1"
-    prop-types "^15.5.8"
-    recompose "^0.26.0"
-    scriptjs "^2.5.8"
-    warning "^3.0.0"
-
 react-is@^16.13.0, react-is@^16.13.1, react-is@^16.7.0:
   version "16.13.1"
   resolved "https://martifactory.io/api/npm/virtual-npm/react-is/-/react-is-16.13.1.tgz"
@@ -10887,6 +10853,11 @@ react-native-confirmation-code-field@^7.2.0:
   version "7.2.0"
   resolved "https://martifactory.io/api/npm/virtual-npm/react-native-confirmation-code-field/-/react-native-confirmation-code-field-7.2.0.tgz"
   integrity sha1-0PI0diCaTQPI7fa4iMbEGpE2D8I=
+
+react-native-geolocation-service@^5.3.0-beta.4:
+  version "5.3.0-beta.4"
+  resolved "https://martifactory.io/api/npm/virtual-npm/react-native-geolocation-service/-/react-native-geolocation-service-5.3.0-beta.4.tgz#8061396f734028b0ecbf8316a2cda9179df19210"
+  integrity sha1-gGE5b3NAKLDsv4MWos2pF53xkhA=
 
 react-native-gesture-handler@~2.1.0:
   version "2.1.1"
@@ -11196,16 +11167,6 @@ rechoir@^0.6.2:
   integrity sha1-hSBLVNuoLVdC4oyWdW70OvUOM4Q=
   dependencies:
     resolve "^1.1.6"
-
-recompose@^0.26.0:
-  version "0.26.0"
-  resolved "https://martifactory.io/api/npm/virtual-npm/recompose/-/recompose-0.26.0.tgz#9babff039cb72ba5bd17366d55d7232fbdfb2d30"
-  integrity sha1-m6v/A5y3K6W9FzZtVdcjL737LTA=
-  dependencies:
-    change-emitter "^0.1.2"
-    fbjs "^0.8.1"
-    hoist-non-react-statics "^2.3.1"
-    symbol-observable "^1.0.4"
 
 recursive-readdir@2.2.2:
   version "2.2.2"
@@ -11657,11 +11618,6 @@ schema-utils@^3.0.0, schema-utils@^3.1.1:
     "@types/json-schema" "^7.0.8"
     ajv "^6.12.5"
     ajv-keywords "^3.5.2"
-
-scriptjs@^2.5.8:
-  version "2.5.9"
-  resolved "https://martifactory.io/api/npm/virtual-npm/scriptjs/-/scriptjs-2.5.9.tgz#343915cd2ec2ed9bfdde2b9875cd28f59394b35f"
-  integrity sha1-NDkVzS7C7Zv93iuYdc0o9ZOUs18=
 
 select-hose@^2.0.0:
   version "2.0.0"
@@ -12475,11 +12431,6 @@ svgo@^1.0.0, svgo@^1.2.2:
     unquote "~1.1.1"
     util.promisify "~1.0.0"
 
-symbol-observable@^1.0.4:
-  version "1.2.0"
-  resolved "https://martifactory.io/api/npm/virtual-npm/symbol-observable/-/symbol-observable-1.2.0.tgz#c22688aed4eab3cdc2dfeacbb561660560a00804"
-  integrity sha1-wiaIrtTqs83C3+rLtWFmBWCgCAQ=
-
 symbol-tree@^3.2.4:
   version "3.2.4"
   resolved "https://martifactory.io/api/npm/virtual-npm/symbol-tree/-/symbol-tree-3.2.4.tgz#430637d248ba77e078883951fb9aa0eed7c63fa2"
@@ -12911,6 +12862,11 @@ unicode-property-aliases-ecmascript@^2.0.0:
   resolved "https://martifactory.io/api/npm/virtual-npm/unicode-property-aliases-ecmascript/-/unicode-property-aliases-ecmascript-2.0.0.tgz#0a36cb9a585c4f6abd51ad1deddb285c165297c8"
   integrity sha1-CjbLmlhcT2q9Ua0d7dsoXBZSl8g=
 
+unimodules-task-manager-interface@~7.1.0:
+  version "7.1.0"
+  resolved "https://martifactory.io/api/npm/virtual-npm/unimodules-task-manager-interface/-/unimodules-task-manager-interface-7.1.0.tgz#01a981a8ff638843ce34f83a1ed73e81f62304d5"
+  integrity sha1-AamBqP9jiEPONPg6Htc+gfYjBNU=
+
 union-value@^1.0.0:
   version "1.0.1"
   resolved "https://martifactory.io/api/npm/virtual-npm/union-value/-/union-value-1.0.1.tgz#0b6fe7b835aecda61c6ea4d4f02c14221e109847"
@@ -13168,13 +13124,6 @@ warn-once@^0.1.0:
   version "0.1.0"
   resolved "https://martifactory.io/api/npm/virtual-npm/warn-once/-/warn-once-0.1.0.tgz"
   integrity sha1-T1jYm4T5aNA4kXaqmeDPDxT/1Mg=
-
-warning@^3.0.0:
-  version "3.0.0"
-  resolved "https://martifactory.io/api/npm/virtual-npm/warning/-/warning-3.0.0.tgz#32e5377cb572de4ab04753bdf8821c01ed605b7c"
-  integrity sha1-MuU3fLVy3kqwR1O9+IIcAe1gW3w=
-  dependencies:
-    loose-envify "^1.0.0"
 
 watchpack-chokidar2@^2.0.1:
   version "2.0.1"

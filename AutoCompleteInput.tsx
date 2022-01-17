@@ -1,9 +1,7 @@
 import {View, StyleSheet, Text, Dimensions, ScrollView} from 'react-native';
-import {GooglePlaceData, GooglePlacesAutocomplete} from "react-native-google-places-autocomplete";
+import {GooglePlaceData, GooglePlaceDetail, GooglePlacesAutocomplete} from "react-native-google-places-autocomplete";
 import Constants from 'expo-constants';
 import {useEffect, useState} from "react";
-// import MyMapp from "./MyMapp";
-// import MapView from 'react-native-maps';
 
 const styles = StyleSheet.create({
     container: {
@@ -19,31 +17,50 @@ const styles = StyleSheet.create({
 });
 
 const GOOGLE_PLACES_API_KEY = "AIzaSyCqDDNHBHNG96GVEIFwgAuIFD9k4O-h96o";
+navigator.geolocation = require('@react-native-community/geolocation');
+navigator.geolocation = require('react-native-geolocation-service');
 
-function AutoCompleteInput() {
-    const [data, setData] = useState<GooglePlaceData>()
+function AutoCompleteInput(props : { name : string , currentLocation : boolean}) {
     useEffect(() => {
+        // navigator.geolocation.getCurrentPosition(() => {});
+        // navigator.geolocation = require('@react-native-community/geolocation');
+        // navigator.geolocation = require('react-native-geolocation-service');
+    });
+    const [data, setData] = useState<GooglePlaceData>()
+    const [details, setDetails] = useState<GooglePlaceDetail | undefined | null>()
+    useEffect(() => {
+        debugger;
     }, [data]);
 
     return (
+        <View>
             <ScrollView>
-            {/*<MapView style={styles.map}/>*/}
-            <GooglePlacesAutocomplete
-                placeholder="Search"
-                listViewDisplayed={false} // true/false/undefined
-                fetchDetails={true}
-                keyboardShouldPersistTaps="handled"
-                enablePoweredByContainer={true}
-                query={{
-                    key: GOOGLE_PLACES_API_KEY,
-                    language: 'ua', // language of the results
-                }}
-                onPress={(data, details = null) => setData(data)}
-                onFail={(error) => setData(error)}
-            />
+                {/*<MapView style={styles.map}/>*/}
+                <GooglePlacesAutocomplete
+                    placeholder={props.name}
+                    currentLocation={props.currentLocation}
+                    currentLocationLabel={props.currentLocation ? 'Current location' : ""}
+                    listViewDisplayed={false} // true/false/undefined
+                    fetchDetails={true}
+                    keyboardShouldPersistTaps="handled"
+                    enablePoweredByContainer={true}
+                    GooglePlacesDetailsQuery={{ fields: "geometry" }}
+                    nearbyPlacesAPI={'GoogleReverseGeocoding'}
+                    query={{
+                        key: GOOGLE_PLACES_API_KEY,
+                        language: 'en', // language of the results
+                    }}
+                    onPress={(data, details = null) => {
+                        setData(data); setDetails(details)}
+                    }
+                    onFail={(error) => setData(error)}
+                />
 
-            <Text>{data?.place_id}</Text>
             </ScrollView>
+            <Text>data: {JSON.stringify(data)}</Text>
+            <Text>details: {JSON.stringify(details)}</Text>
+
+        </View>
     );
 }
 

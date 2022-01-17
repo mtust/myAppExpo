@@ -4,7 +4,7 @@ import {isValidPhoneNumber} from 'react-phone-number-input'
 import axios from "axios";
 import PhoneInput from 'react-phone-number-input/react-native-input'
 import PhoneContext from "./PhoneContext";
-import AutoCompleteInput from "./AutoCompleteInput";
+import Ride from "./Ride";
 
 const styles = StyleSheet.create({
     button: {
@@ -60,7 +60,7 @@ function Login({navigation}) {
                         }
                     })
                     }/>
-            <AutoCompleteInput/>
+            <Ride/>
         </SafeAreaView>
     );
 }
