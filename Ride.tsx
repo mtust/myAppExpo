@@ -1,8 +1,10 @@
 import AutoCompleteInput from "./AutoCompleteInput";
 import {Button, StyleSheet, View} from "react-native";
 import axios from "axios";
-import {useEffect} from "react";
-import Geolocation from '@react-native-community/geolocation';
+import {useEffect, useState} from "react";
+// import Geolocation from '@react-native-community/geolocation';
+// import Geolocation from 'react-native-geolocation-service';
+import * as Location from 'expo-location';
 
 const styles = StyleSheet.create({
     button: {
@@ -18,13 +20,22 @@ const styles = StyleSheet.create({
 
 
 function Ride() {
+   const [location, setLocation] = useState(null);
+    const [errorMsg, setErrorMsg] = useState(null);
+
     useEffect(() => {
-       navigator.geolocation = require('@react-native-community/geolocation');
-       navigator.geolocation = require('react-native-geolocation-service');
-       // navigator.geolocation.getCurrentPosition(() => {});
-        // navigator.geolocation = require('@react-native-community/geolocation');
-        // navigator.geolocation = require('react-native-geolocation-service');
-    });
+      (async () => {
+
+        let { status } = await Location.requestForegroundPermissionsAsync();
+        if (status !== 'granted') {
+          setErrorMsg('Permission to access location was denied');
+          return;
+        }
+
+        let location = await Location.getCurrentPositionAsync({});
+        setLocation(location);
+      })();
+    }, []);
 
     return (
         <View>
@@ -32,7 +43,7 @@ function Ride() {
             <AutoCompleteInput name={"Place to"} currentLocation={false}/>
             <Button title={"Create ride"}
                     style={styles.button} d title={"submit"}
-                    onPress={() => axios.post('http://localhost:8080/users/verify/phone', {
+                    onPress={() => axios.post('https://taxirun-56yus5neyq-uc.a.run.app/rides', {
                     }).then((response) => {
 
                     })

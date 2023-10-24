@@ -51,7 +51,7 @@ function MyMapp() {
                     apiKey={YOUR_GOOGLE_MAPS_API_KEY}
                     onPlaceSelected={(place) => console.log(place)}
                 />
-                <button onClick={() => axios.post('http://localhost:8080/rides', {
+                <button onClick={() => axios.post('https://taxirun-56yus5neyq-uc.a.run.app/rides', {
                     placeFrom: {
                         point: {
                             x: locationFrom.lat,

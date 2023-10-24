@@ -37,7 +37,11 @@
       "favicon": "./assets/favicon.png"
     },
     "plugins": [
-      "expo-location"
+      [
+        "expo-location", {
+          "locationAlwaysAndWhenInUsePermission": "Allow tax app to use your location."
+        }
+      ]
     ]
   }
 }

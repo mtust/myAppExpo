@@ -51,7 +51,7 @@ function Login({navigation}) {
                 is valid phone number: {!isValidPhone ? "false" : "true"}
             </Text>
             <Button style={styles.button} disabled={!isValidPhone} title={"submit"}
-                    onPress={() => axios.post('http://localhost:8080/users/verify/phone', {
+                    onPress={() => axios.post('https://taxirun-56yus5neyq-uc.a.run.app/users/verify/phone', {
                         phoneNumber: {phoneNumber}.phoneNumber
                     }).then((response) => {
                         if (response.status === 200) {

@@ -17,20 +17,10 @@ const styles = StyleSheet.create({
 });
 
 const GOOGLE_PLACES_API_KEY = "AIzaSyCqDDNHBHNG96GVEIFwgAuIFD9k4O-h96o";
-navigator.geolocation = require('@react-native-community/geolocation');
-navigator.geolocation = require('react-native-geolocation-service');
 
 function AutoCompleteInput(props : { name : string , currentLocation : boolean}) {
-    useEffect(() => {
-        // navigator.geolocation.getCurrentPosition(() => {});
-        // navigator.geolocation = require('@react-native-community/geolocation');
-        // navigator.geolocation = require('react-native-geolocation-service');
-    });
     const [data, setData] = useState<GooglePlaceData>()
     const [details, setDetails] = useState<GooglePlaceDetail | undefined | null>()
-    useEffect(() => {
-        debugger;
-    }, [data]);
 
     return (
         <View>
